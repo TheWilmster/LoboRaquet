@@ -12,12 +12,12 @@ BUILD_DIR := bin
 SRC_DIR := src
 
 ifeq ($(OS), Windows_NT)
-    LIBS := -Lwinclude/lib/ -lSDL2 -lSDL2_mixer -lm -lSDL2main -mwindows
+    LIBS := -Lwinclude/lib/ -lSDL2 -lSDL2_mixer -lm -lSDL2main -mwindows -lSDL2_image
     PLATFORM := win
-    INSULT := "Windows Dev? I am so sorry."
+    INSULT := "Windows Dev? Wow! I won't judge. Except I will. FUCK YOU."
     EXTENSION := .exe
 else
-    LIBS := -lSDL2 -lSDL2_mixer -lSDL2main -lm
+    LIBS := -lSDL2 -lSDL2_mixer -lSDL2main -lm -lSDL2_image
     PLATFORM := nix
     INSULT := "*Nix Dev? How's your waifu wallpaper holding up?"
     EXTENSION := .x86_64

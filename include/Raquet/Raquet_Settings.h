@@ -28,7 +28,7 @@
 //#define BACKGROUND_CLEARING_COLOR
 
 /** @brief The initial window title */
-#define GAME_NAME "Raquet Game Engine"
+#define GAME_NAME "PLEASE work im BEGGING you"
 
 /** @brief The audio sample rate. Lower value gives lower quality sound */
 #define AUDIO_SAMPLE_RATE 44100
