@@ -3,6 +3,7 @@
 Raquet_Sound mu_test;
 int playerx;
 int playery;
+TTF_Font *font;
 
 // I HATE actors.
 //Raquet_Actor* act_placeface;
@@ -20,7 +21,7 @@ void createthedog() {
     playerx = SCREEN_WIDTH / 2;
     playery = SCREEN_HEIGHT / 2;
 
-    //act_placeface = Raquet_AllocateActor(); // Allocates memory for the actor.
+    font = LoboRaquet_LoadFont("arial.ttf", 24);
 }
 
 // Runs forever until the program is closed.
@@ -35,7 +36,9 @@ void runthedog() {
 
     Raquet_Point test_point = { 25, 25 };
 
-    SDL_Texture * png_test;
+    SDL_Texture *png_test;
     png_test = LoboRaquet_LoadIMG("test_image.png");
     LoboRaquet_PlaceIMG_ext(png_test, playerx, playery, 50, 50, 0, test_point, SDL_FLIP_NONE);
+
+    LoboRaquet_PlaceText(font, "LoboRaquet!", 20, 20);
 }

@@ -9,7 +9,7 @@ void Raquet_ShowCursor(int toggle) {
 const char* Raquet_AbsoluteToAsset(const char* relativepath) {
     char ret[1024] = "";
     strcpy(ret, SDL_GetBasePath());
-    strcat(ret, "assets/");
+    strcat(ret, "assets\\");
     strcat(ret, relativepath);
     return (const char*)strcpy((char*)malloc(sizeof(char*) * strlen(ret)), ret);
 }

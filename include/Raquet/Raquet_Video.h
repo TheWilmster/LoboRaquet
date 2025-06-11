@@ -25,22 +25,6 @@ int Raquet_LoadPPFBank(PPF_Bank* targetarray, const char* dir);
 Raquet_CHR Raquet_LoadCHR(PPF_Bank ppfbank, int id, Palette pal[4]);
 
 /**
- * @brief Loads the texture of an image file.
- * @param filename The name of the image file to load.
- */
-extern SDL_Texture * LoboRaquet_LoadIMG(char * filename);
-
-/**
- * @brief dude im too fucking tired to tell you rn
- */
-extern void LoboRaquet_PlaceIMG(SDL_Texture * tex, int x, int y);
-
-/**
- * @brief dude im too fucking tired to tell you rn (but extended!)
- */
-extern void LoboRaquet_PlaceIMG_ext(SDL_Texture * tex, int x, int y, int xsize, int ysize, double angle, Raquet_Point center, SDL_RendererFlip flip);
-
-/**
  * @brief Loads a CHR texture from a PPF_Bank into a Raquet_CHR
  * @param ppfbank The PPF_Bank to load the texture from
  * @param id The array of CHR IDs to load ( -1 will load a blank 8x8 tile )
