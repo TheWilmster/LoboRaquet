@@ -7,7 +7,7 @@ Raquet Documentation can be found at [https://raquet.sinislosion.net/](https://r
 <br><br>
 
 # LoboRaquet Features
-- 2D rendering with modern image file types.
+- 2D rendering with modern image file types, and text with TTF or FON fonts.
 
 ## Compilation
 For Compilation instructions, it's the same as Raquet. So please check the [enclosed instruction book](https://raquet.sinislosion.net/v1x/Compilation/)
