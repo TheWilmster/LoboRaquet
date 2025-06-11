@@ -58,6 +58,8 @@ int Raquet_InitSDL(void) {
             #endif
             fflush(stdout);
 
+            TTF_Init(); // Initalize SDL_ttf
+            
             // Init Window Renderer
             #ifdef VSYNC
             	Raquet_Renderer = SDL_CreateRenderer(Raquet_Window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_TARGETTEXTURE);
@@ -79,9 +81,7 @@ int Raquet_InitSDL(void) {
 
 
             SDL_SetRenderDrawBlendMode(Raquet_Renderer, SDL_BLENDMODE_BLEND);
-
         }
-
     }
 
     return 1;
