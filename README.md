@@ -4,6 +4,7 @@
 A fork of the Raquet game engine implementing modern image file types support!<br>
 LoboRaquet stands for "Lobotomized Raquet", a reference to the Raquet wiki saying the only way to add modern image file support is by performing a lobotomy.<br>
 Raquet Documentation can be found at [https://raquet.sinislosion.net/](https://raquet.sinislosion.net/)<br>
+LoboRaquet Documentation can be found at [https://github.com/TheWilmster/LoboRaquet/wiki](https://github.com/TheWilmster/LoboRaquet/wiki)
 <br><br>
 
 # LoboRaquet Features
