@@ -41,6 +41,6 @@ void runthedog() {
     LoboRaquet_PlaceIMG_ext(png_test, playerx, playery, 50, 50, 0, test_point, SDL_FLIP_NONE);
     
     SDL_Color color = { 255, 255, 255, 255 };
-    LoboRaquet_PlaceText_ext(font, "LoboRaquet is my FAVORITE engine!", 25, 25, 1, 1, color, SCREEN_WIDTH - 50);
+    LoboRaquet_PlaceText_ext(font, "LoboRaquet fucking SUCKS.", 25, 25, 1, 1, color, SCREEN_WIDTH - 50);
 }
 // I HATE C99

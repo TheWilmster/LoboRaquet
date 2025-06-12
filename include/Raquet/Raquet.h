@@ -65,7 +65,7 @@ extern SDL_Event Raquet_Event;
 #include "Raquet_Video.h"
 
 /* LoboRaquet Headers */
-#include "LoboRaquet_Video.h"
+#include "LoboRaquet.h"
 
 /*
  ****************************
