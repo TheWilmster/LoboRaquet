@@ -21,7 +21,7 @@ void createthedog() {
     playerx = SCREEN_WIDTH / 2;
     playery = SCREEN_HEIGHT / 2;
 
-    font = LoboRaquet_LoadFont("arial.ttf", 24);
+    font = LoboRaquet_LoadFont("8bitoperator_jve.ttf", 16);
 }
 
 // Runs forever until the program is closed.
@@ -39,6 +39,8 @@ void runthedog() {
     SDL_Texture *png_test;
     png_test = LoboRaquet_LoadIMG("test_image.png");
     LoboRaquet_PlaceIMG_ext(png_test, playerx, playery, 50, 50, 0, test_point, SDL_FLIP_NONE);
-
-    LoboRaquet_PlaceText(font, "LoboRaquet!", 20, 20);
+    
+    SDL_Color color = { 255, 255, 255, 255 };
+    LoboRaquet_PlaceText_ext(font, "LoboRaquet is my FAVORITE engine!", 25, 25, 1, 1, color, SCREEN_WIDTH - 50);
 }
+// I HATE C99

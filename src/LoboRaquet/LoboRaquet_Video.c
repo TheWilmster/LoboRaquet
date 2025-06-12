@@ -32,13 +32,35 @@ void LoboRaquet_PlaceIMG_ext(SDL_Texture * tex, int x, int y, int xsize, int ysi
     SDL_RenderCopyEx(Raquet_Renderer, tex, NULL, & dstrect, angle, & center, flip);
 }
 
-void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y) {
+SDL_Texture *LoboRaquet_GetStringTexture(TTF_Font *font, char *string, int r, int g, int b, int alpha, Uint32 wraplength) {
     SDL_Surface *temp_surf;
     SDL_Texture *tex;
-    SDL_Color color={ 255, 255, 255, 255 };
-    temp_surf = TTF_RenderUTF8_Solid(font, string, color);
+    SDL_Color color={ r, g, b, alpha };
+    temp_surf = TTF_RenderText_Blended_Wrapped(font, string, color, wraplength);
     tex = SDL_CreateTextureFromSurface(Raquet_Renderer, temp_surf);
+    SDL_FreeSurface(temp_surf);
 
+    return tex;
+}
+
+int LoboRaquet_GetTextWidth(TTF_Font *font, char *string) {
+    SDL_Texture *tex = LoboRaquet_GetStringTexture(font, string, 255, 255, 255, 255, 2147483647);
+    int width;
+    SDL_QueryTexture(tex, NULL, NULL, &width, NULL);
+    SDL_DestroyTexture(tex);
+    return width;
+}
+
+int LoboRaquet_GetTextHeight(TTF_Font *font, char *string) {
+    SDL_Texture *tex = LoboRaquet_GetStringTexture(font, string, 255, 255, 255, 255, 2147483647);
+    int height;
+    SDL_QueryTexture(tex, NULL, NULL, NULL, &height);
+    SDL_DestroyTexture(tex);
+    return height;
+}
+
+void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y) {
+    SDL_Texture *tex = LoboRaquet_GetStringTexture(font, string, 255, 255, 255, 255, 2147483647);
     int width;
     int height;
     SDL_QueryTexture(tex, NULL, NULL, &width, &height);
@@ -49,7 +71,21 @@ void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y) {
         height
     };
     SDL_RenderCopy(Raquet_Renderer, tex, NULL, & dstrect);
-    SDL_FreeSurface(temp_surf);
+    SDL_DestroyTexture(tex);
+}
+
+void LoboRaquet_PlaceText_ext(TTF_Font *font, char *string, int x, int y, int xscale, int yscale, SDL_Color color, Uint32 wrapLength) {
+    SDL_Texture *tex = LoboRaquet_GetStringTexture(font, string, color.r, color.g, color.b, color.a, wrapLength);
+    int width;
+    int height;
+    SDL_QueryTexture(tex, NULL, NULL, &width, &height);
+    SDL_Rect dstrect = {
+        x,
+        y,
+        width * xscale,
+        height * yscale
+    };
+    SDL_RenderCopy(Raquet_Renderer, tex, NULL, & dstrect);
     SDL_DestroyTexture(tex);
 }
 
