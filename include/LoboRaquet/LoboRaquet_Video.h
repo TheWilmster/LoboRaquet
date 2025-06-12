@@ -23,6 +23,8 @@ extern SDL_Texture *LoboRaquet_GetStringTexture(TTF_Font *font, char *string, in
 
 extern int LoboRaquet_GetTextWidth(TTF_Font *font, char *string);
 
+extern int LoboRaquet_GetTextHeight(TTF_Font *font, char *string);
+
 /**
  * @brief eventually im gonna have to make these actual descriptions
  */
