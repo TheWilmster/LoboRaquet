@@ -35,7 +35,7 @@ void runthedog() {
     playery += diry;
 
     Raquet_Point test_point = { 25, 25 };
-
+    
     SDL_Texture *png_test;
     png_test = LoboRaquet_LoadIMG("test_image.png");
     LoboRaquet_PlaceIMG_ext(png_test, playerx, playery, 50, 50, 0, test_point, SDL_FLIP_NONE);

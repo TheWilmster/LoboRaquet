@@ -16,6 +16,7 @@
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_net.h>
 
 /* More Constants */
 
@@ -65,7 +66,7 @@ extern SDL_Event Raquet_Event;
 #include "Raquet_Video.h"
 
 /* LoboRaquet Headers */
-#include "LoboRaquet_Video.h"
+#include "LoboRaquet.h"
 
 /*
  ****************************
