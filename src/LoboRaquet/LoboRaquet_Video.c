@@ -48,9 +48,15 @@ int LoboRaquet_GetTextWidth(TTF_Font *font, char *string) {
     int width;
     SDL_QueryTexture(tex, NULL, NULL, &width, NULL);
     SDL_DestroyTexture(tex);
-    printf("%s", string);
-    printf(" %d\n", width);
-    return abs(width);
+    return width;
+}
+
+int LoboRaquet_GetTextHeight(TTF_Font *font, char *string) {
+    SDL_Texture *tex = LoboRaquet_GetStringTexture(font, string, 255, 255, 255, 255, 2147483647);
+    int height;
+    SDL_QueryTexture(tex, NULL, NULL, NULL, &height);
+    SDL_DestroyTexture(tex);
+    return height;
 }
 
 void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y) {
