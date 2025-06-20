@@ -24,9 +24,6 @@
 // Whether or not to enable the Raquet_DeltaTime variable
 //#define DELTA_TIME
 
-// Whether or not to make Raquet_Clear also change the window background */
-//#define BACKGROUND_CLEARING_COLOR
-
 /** @brief The initial window title */
 #define GAME_NAME "PLEASE work im BEGGING you"
 
@@ -37,7 +34,7 @@
 #define FRAMERATE_CAP 60
 
 // When defined, allows you to see any actors' bounding boxes */
-//#define VISUALIZE_BBOX
+#define VISUALIZE_BBOX
 
 /** @brief When enabled, will output debug messages to the console */
 #define PRINT_DEBUG

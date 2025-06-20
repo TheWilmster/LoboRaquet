@@ -92,3 +92,8 @@ void LoboRaquet_PlaceText_ext(TTF_Font *font, char *string, int x, int y, int xs
 TTF_Font *LoboRaquet_LoadFont(char *filename, int size) {
     return TTF_OpenFont(Raquet_AbsoluteToAsset(filename), size);
 }
+
+void LoboRaquet_SetDrawColor(int red, int green, int blue, float alpha) {
+    int realAlpha = (int)(alpha * 255.0);
+    SDL_SetRenderDrawColor(Raquet_Renderer, red, green, blue, SDL_clamp(realAlpha, 0, 255));
+}

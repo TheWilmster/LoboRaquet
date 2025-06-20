@@ -14,7 +14,6 @@ SDL_Rect Raquet_RectScreenScale = {
 };
 
 SDL_Event Raquet_Event;
-Palette Raquet_ClearColor;
 
 /*
  ****************************
@@ -130,11 +129,7 @@ void Raquet_Update(void) {
 
     SDL_RenderPresent(Raquet_Renderer);
 
-    #ifndef BACKGROUND_CLEARING_COLOR
-        SDL_SetRenderDrawColor(Raquet_Renderer, 0, 0, 0, 255);
-    #else
-        Raquet_SetDrawColor(Raquet_ClearColor, 255);
-    #endif
+    SDL_SetRenderDrawColor(Raquet_Renderer, 0, 0, 0, 255);
 
     SDL_RenderClear(Raquet_Renderer);
 

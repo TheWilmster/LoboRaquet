@@ -13,9 +13,8 @@ Raquet Documentation can be found at [https://raquet.sinislosion.net/](https://r
 For Compilation instructions, it's the same as Raquet. So please check the [enclosed instruction book](https://raquet.sinislosion.net/v1x/Compilation/)
 
 # License/Credits
-- "2A03_Kevvviiinnn-Superfusion.wav" exported from Famitracker's demo included songs is licensed under the GPL v2.0 and was created by [symfonikev](https://www.youtube.com/watch?v=gvhjNV9uKl8)<br>
+- "mu_test.ogg" was made by the creator of this fork, TheWilmster<br>
 - Everything else is licensed under the [WTFPL](http://www.wtfpl.net/about/)
-- Palette is "Digital Prime" by FirebrandX at [firebrandx.com](http://www.firebrandx.com/nespalettes.html) and used with permission<br><br>
 ![sinislosion_userbar](https://github.com/Sinislosion/Raquet/assets/144758323/def817b8-65ae-451c-ab79-ace6702e44ae)
 
 # Credits for LoboRaquet

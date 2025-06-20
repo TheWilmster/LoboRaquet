@@ -60,12 +60,11 @@ extern SDL_Event Raquet_Event;
 #include "Raquet_Input.h"
 #include "Raquet_Math.h"
 #include "Raquet_Misc.h"
-#include "Raquet_Palette.h"
 #include "Raquet_Sound.h"
 #include "Raquet_Video.h"
 
-/* LoboRaquet Headers */
-#include "LoboRaquet_Video.h"
+/* LoboRaquet Header */
+#include "LoboRaquet.h"
 
 /*
  ****************************
@@ -100,22 +99,9 @@ extern int Raquet_InitSDL(void);
 extern int Raquet_Init(void);
 
 /**
- * @brief Wrapper for SDL's Render Set Draw Color, that converts a Raquet Palette Value to an RGBA8 value
- * @param pal The palette color to set the Draw Color to
- * @param alpha The opacity of the color ( 0 to 255 )
- */
-extern void Raquet_SetDrawColor(Palette pal, int alpha);
-
-/* Clear the screen with a solid color */
-#ifdef BACKGROUND_CLEARING_COLOR
-    extern Palette Raquet_ClearColor;
-#endif
-
-/**
  * @brief Clears the screen with a specified color
- * @param pal The Palette color to clear the screen with.
  */
-extern void Raquet_Clear(Palette pal);
+extern void Raquet_Clear(int red, int green, int blue, float alpha);
 
 /**
  * @brief Draws a rectangle of a given color onto the screen
@@ -123,11 +109,13 @@ extern void Raquet_Clear(Palette pal);
  * @param y The Y position of the rectangle in Screen space
  * @param width The width of the rectangle
  * @param height The height of the rectangle
- * @param pal The Palette color of the rectangle
+ * @param red The red color value
+ * @param green The green color value
+ * @param blue The blue color value
  * @param alpha The transparecny of the rectangle, with 255 being the max and 0 being the minimum
  * @param fill Whether or not to fill in the rectangle (1 or yes, 0 for no)
  */
-extern void Raquet_DrawRectangle(int x1, int y1, int width, int height, Palette pal, int alpha, int fill);
+extern void LoboRaquet_DrawRectangle(int x1, int y1, int width, int height, int red, int green, int blue, float alpha, int fill);
 
 /**
  * @brief Used to update the Window within the Raquet_Main function

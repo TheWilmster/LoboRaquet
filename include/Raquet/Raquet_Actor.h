@@ -14,9 +14,9 @@ Raquet_Actor * Raquet_AllocateActor(void);
 /**
  * @brief Initializes an Actor along with a texture
  * @param act The Actor to initialize
- * @param chr The CHR texture to initialize the Actor with
+ * @param tex The texture to initialize the Actor with
  */
-void Raquet_CreateActor(Raquet_Actor * act, Raquet_CHR chr);
+void Raquet_CreateActor(Raquet_Actor * act, SDL_Texture * tex);
 
 /**
  * @brief Draws an Actor onto the screen

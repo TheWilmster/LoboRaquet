@@ -1,5 +1,5 @@
-#ifndef LOBORAQUET_VIDEO_H
-#define LOBORAQUET_VIDEO_H
+#ifndef LOBORAQUET_H
+#define LOBORAQUET_H
 
 /** @file */
 
@@ -33,5 +33,14 @@ extern void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y);
 extern void LoboRaquet_PlaceText_ext(TTF_Font *font, char *string, int x, int y, int xscale, int yscale, SDL_Color color, Uint32 wrapLength);
 
 TTF_Font *LoboRaquet_LoadFont(char *filename, int pointsize);
+
+/**
+ * @brief Wrapper for SDL's Render Set Draw Color that makes it slightly less complicated
+ * @param red The color's red value ( 0 to 255 )
+ * @param green The color's green value ( 0 to 255 )
+ * @param blue The color's blue value ( 0 to 255 )
+ * @param alpha The opacity of the color ( 0 to 1 )
+ */
+extern void LoboRaquet_SetDrawColor(int red, int green, int blue, float alpha);
 
 #endif
