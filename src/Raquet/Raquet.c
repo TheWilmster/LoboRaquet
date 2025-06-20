@@ -45,13 +45,6 @@ int Raquet_InitSDL(void) {
             #endif
             return 0;
         }
-        // Init SDL_net
-        if (SDLNet_Init() < 0) {
-            #ifdef PRINT_DEBUG
-                printf("FAILED TO INITALIZE SDL NET.\n");
-            #endif
-            return 0;
-        }
         // Create window
         Raquet_Window = SDL_CreateWindow(GAME_NAME, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH * SCREEN_SCALE, SCREEN_HEIGHT * SCREEN_SCALE, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
         if (Raquet_Window == NULL) {

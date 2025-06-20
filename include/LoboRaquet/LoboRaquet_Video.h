@@ -1,5 +1,5 @@
-#ifndef LOBORAQUET_H
-#define LOBORAQUET_H
+#ifndef LOBORAQUET_VIDEO_H
+#define LOBORAQUET_VIDEO_H
 
 /** @file */
 
@@ -33,15 +33,5 @@ extern void LoboRaquet_PlaceText(TTF_Font *font, char *string, int x, int y);
 extern void LoboRaquet_PlaceText_ext(TTF_Font *font, char *string, int x, int y, int xscale, int yscale, SDL_Color color, Uint32 wrapLength);
 
 TTF_Font *LoboRaquet_LoadFont(char *filename, int pointsize);
-
-extern TCPsocket LoboRaquet_NetClient_ConnectTCP(IPaddress *ip, const char *host, Uint16 port);
-
-extern TCPsocket LoboRaquet_NetServer_CreateSocketTCP(IPaddress *ip, Uint16 port);
-
-extern TCPsocket LoboRaquet_NetServer_AcceptSocketTCP(TCPsocket serverSock);
-
-extern IPaddress LoboRaquet_Net_GetSocketAddress(TCPsocket sock);
-
-extern void LoboRaquet_Net_CloseSocketTCP(TCPsocket sock);
 
 #endif
